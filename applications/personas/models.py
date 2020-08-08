@@ -1,6 +1,5 @@
 from django.db import models
 from applications.departamento.models import Departamento
-from ckeditor.fields import RichTextField
 
 class Habilidades(models.Model):
     habilidad = models.CharField('Habilidad',max_length=60)    
@@ -24,7 +23,6 @@ class Empleado(models.Model):
     job = models.CharField('Trabajo',max_length=50, choices = JOB_CHOICES)
     departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
     habilidades = models.ManyToManyField(Habilidades)
-    hoja_vida = RichTextField(max_length=200, blank=True, null=True)
     avatar = models.ImageField(upload_to='empleado', blank=True, null=True)
     
     class Meta:
