@@ -30,9 +30,6 @@ INSTALLED_APPS = [
     'applications.personas',
     # Se instala la aplicación home
     'applications.home',    
-    # ************** Aplicaciones creadas por mi *****************
-    # Se instala la aplicación ckeditor
-    'ckeditor',    
 ]
 
 MIDDLEWARE = [
