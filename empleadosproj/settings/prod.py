@@ -6,7 +6,7 @@ ALLOWED_HOSTS = ['www.prueba.estoesunaprueba.xyz', 'prueba.estoesunaprueba.xyz']
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
+# Hola mundo
 DATABASES = {
     'default': {        
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
