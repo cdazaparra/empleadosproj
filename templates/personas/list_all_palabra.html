@@ -1,0 +1,11 @@
+<h1>Lista de empleados por palabra</h1>
+<form action="" method="get">{% csrf_token %}
+    <input type="text" id="palabraClave" name="palabraClave" placeholder="Ingrese nombre aquí">
+    <button type="submit">Buscar</button>
+</form>
+<h2>Lista de resultados</h2>
+<ul>
+    {% for lista in object_list %}
+    <li>{{lista}}</li>
+    {% endfor %}
+</ul>

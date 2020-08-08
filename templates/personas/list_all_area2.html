@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Lista{% endblock title %}
+{% block content %}
+<div class="grid-container">
+    <div class="grid-x">
+        <h1 class="cell">Lista de empleados por area</h1>
+        <div class="cell">
+            <table>
+                <thead>
+                    <tr>
+                        <th width="200">ID</th>
+                        <th>Nombres</th>
+                        <th width="150">Apellidos</th>
+                        <th width="150">Departamento</th>
+                        <th width="150">Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for lista in object_list %}
+                    <tr>
+                        <td>{{lista.id}}</td>
+                        <td>{{lista.firts_name}}</td>
+                        <td>{{lista.last_name}}</td>
+                        <td>{{lista.departamento}}</td>
+                        <td><a class="button warning" href="{% url 'persona_app:empleado_detalle' lista.id %}">Ver</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock content %}

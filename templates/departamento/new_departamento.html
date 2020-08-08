@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Crear Departamento{% endblock title %}
+{% block content %}
+<div class="grid-container">
+    <div class="grid-x">
+        <h1 class="cell">Crear Departamento</h1>
+        <div class="cell">
+            <form class="cell callout grid-x grid-margin-x" method="post">{% csrf_token %}
+                <h3 class="medium-12 cell">Datos empleado</h3>
+                <div class="medium-6 cell"><label>Nombre:{{form.nombre}}</label></div>
+                <div class="medium-6 cell"><label>Apellido:{{form.apellido}}</label></div>
+                <h3  class="medium-12 cell">Datos Departamento</h3>
+                <div class="medium-6 cell"><label>Nombre:{{form.departamento}}</label></div>
+                <div class="medium-6 cell"><label>Sigla:{{form.shorname}}</label></div>
+            </form>
+            <div class="medium-12 cell">
+                <button type="submit" class="success button">Guardar</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
